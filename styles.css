@@ -1,0 +1,13 @@
+.primary-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid red;
+}
+
+.secondary-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 15px;
+    border: 1px solid blue;
+}
