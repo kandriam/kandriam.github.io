@@ -1,13 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  /* background-color: var(--ter-03); */
+}
+:root {
+  --pri-01: #fbdc40;
+  --pri-02: #fb9e05;
+  --pri-03: #dc5704;
+
+  --sec-01: #972a05;
+  --sec-02: #961705;
+  --sec-03: #5f1504;
+
+  --ter-01: #2c0905;
+  --ter-02: #1b0502;
+    --ter-03: #0e0201;
+}
+
+ul {
+    list-style: disc;
+    padding: 10px;
+    padding-left: 20px;
+}
+
+
+/* Containers */
 .primary-container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid red;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid var(--pri-03);
+    border-radius: 15px;
 }
 
 .secondary-container {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 15px;
-    border: 1px solid blue;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid var(--sec-03);
+    border-radius: 15px;
+}
+
+.list-container {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid var(--ter-03);
+    border-radius: 15px;
+}
+
+.topnav {
+  background-color: var(--sec-02);
+  overflow: hidden;
+}
+
+.topnav a {
+  float: left;
+  color: var(--pink-01);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: var(--sec-01);
+  color: var(--pink-03);
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: var(--ter-01);
+  color: white;
+}
+
+.horizontal-div {
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: space-between;
+    align-items: center;
 }
