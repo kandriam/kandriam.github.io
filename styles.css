@@ -5,26 +5,52 @@
 
 body {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  /* background-color: var(--ter-03); */
+  background-color: var(--pri-01);
 }
 :root {
-  --pri-01: #fbdc40;
-  --pri-02: #fb9e05;
-  --pri-03: #dc5704;
+/* Main Theme */
 
-  --sec-01: #972a05;
-  --sec-02: #961705;
-  --sec-03: #5f1504;
+    --pri-01: #a8e1f2;
+    --pri-02: #78c2e5;
+    --pri-03: #49a2d4;
+    --pri-04: #2a7ca0;
 
-  --ter-01: #2c0905;
-  --ter-02: #1b0502;
-    --ter-03: #0e0201;
+    --sec-01: #4c9a6d;
+    --sec-02: #3b7a5c;
+    --sec-03: #5c4b7f;
+    --sec-04: #332b52;
+
+/* Eng */
+  --eng-01: #fcae61;
+  --eng-02: #f76c42;
+  --eng-03: #f04e24;
+  --eng-04: #d7331a;
+/* Comp Sci */
+  --comp-01:#3b8dbf;
+  --comp-02:#2b6d9c;
+  --comp-03:#1b4a73;
+  --comp-04:#0a2b4e;
 }
+
+h1 {
+    font-size: x-large;
+}
+h2 {
+    font-size: large;
+}
+h3 {
+    font-size: medium;
+}
+p {
+    font-size: small;
+}
+
 
 ul {
     list-style: disc;
     padding: 10px;
     padding-left: 20px;
+    font-size: small;
 }
 
 
@@ -32,32 +58,37 @@ ul {
 .primary-container {
     margin: 10px;
     padding: 10px;
-    border: 1px solid var(--pri-03);
+    border: 1px solid var(--pri-04);
+    justify-content: space-between;
     border-radius: 15px;
+    /* width: fit-content; */
 }
 
 .secondary-container {
+    min-width: fit-content;
     margin: 10px;
     padding: 10px;
-    border: 1px solid var(--sec-03);
+    border: 1px solid var(--pri-04);
+    justify-content: space-between;
     border-radius: 15px;
 }
 
 .list-container {
     margin: 10px;
     padding: 10px;
-    border: 1px solid var(--ter-03);
+    border: 1px solid var(--pri-03);
     border-radius: 15px;
 }
 
 .topnav {
   background-color: var(--sec-02);
+  justify-content: space-between;
   overflow: hidden;
 }
 
 .topnav a {
   float: left;
-  color: var(--pink-01);
+  color: var(--pri-01);
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -72,13 +103,31 @@ ul {
 
 /* Add a color to the active/current link */
 .topnav a.active {
-  background-color: var(--ter-01);
+  background-color: var(--sec-01);
   color: white;
 }
 
-.horizontal-div {
+.ho-div {
     display: flex;
     /* flex-wrap: wrap; */
     justify-content: space-between;
-    align-items: center;
+}
+
+.vert-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Categories */
+.english {
+    /* background-color: var(--eng-01); */
+    /* color: var(--eng-04); */
+    border-color: var(--eng-04);
+    display: none;
+}
+.comp-sci {
+    /* background-color: var(--comp-01); */
+    /* color: var(--comp-04); */
+    border-color: var(--comp-04);
 }
