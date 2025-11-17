@@ -51,14 +51,18 @@ ul {
     padding: 10px;
     padding-left: 20px;
     font-size: small;
+    display: wrap;
 }
 
+li {
+    margin: 5px;
+}
 
 /* Containers */
 .primary-container {
     margin: 10px;
     padding: 10px;
-    border: 1px solid var(--pri-04);
+    /* border: 1px solid var(--pri-04); */
     justify-content: space-between;
     border-radius: 15px;
     /* width: fit-content; */
@@ -66,19 +70,26 @@ ul {
 
 .secondary-container {
     min-width: fit-content;
-    margin: 10px;
-    padding: 10px;
+    margin: 5px;
+    padding: 5px;
     border: 1px solid var(--pri-04);
     justify-content: space-between;
     border-radius: 15px;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.secondary-container:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .list-container {
-    margin: 10px;
-    padding: 10px;
+    margin: 5px;
+    padding: 5px;
     border: 1px solid var(--pri-03);
     border-radius: 15px;
 }
+
+/* Top Navigation Bar */
 
 .topnav {
   background-color: var(--sec-02);
@@ -93,6 +104,45 @@ ul {
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
+}
+
+/* Buttons */
+
+.primary-button {
+    background-color: var(--pri-03);
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: small;
+    margin: 4px 2px;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.primary-button:hover {
+    background-color: var(--pri-04);
+}
+
+.secondary-button {
+    background-color: var(--eng-01);
+    border: none;
+    color: var(--eng-04);
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: small;
+    margin: 4px 2px;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.secondary-button:hover {
+    background-color: var(--eng-04);
+    color: var(--eng-01);
 }
 
 /* Change the color of links on hover */

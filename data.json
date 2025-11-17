@@ -1,0 +1,163 @@
+{
+    "user": {
+        "name": "Kaliana Andriamananjara-Cunderlik",
+        "about": "Passionate front-end programmer with a strong foundation in computer science and experience in both front-end and back-end programming. Co-founded and developed a task management desktop application using TypeScript, JavaScript, HTML, CSS. Proficient in Python, Java and various web programming languages such as TypeScript and JavaScript.",
+        "location": "St Paul, MN, USA",
+        "email": "kandriam@macalester.edu",
+        "linkedin": "http://www.linkedin.com/in/kandriam/",
+        "github": "https://github.com/kandriam",
+        "phone": "(+1) 651-815-7217"
+    },
+    "education": {
+        "school": "Macalester College",
+        "degree": "Bachelor of Arts",
+        "majors": ["Computer Science", "English"]
+    },
+    "comp-sci-courses": [
+        "Comp 128: Data Structures",
+        "Comp 221: Algorithm Design and Analysis",
+        "Comp 225: Software Design and Development",
+        "Comp 325: Video Games: Coding and Narrative",
+        "Comp 240: Computer Systems",
+        "Comp 381: Programming Languages",
+        "Comp 445: Parallel and Distributed Processing",
+        "Comp 446: Internet Computing",
+        "Math 279: Discrete Mathematics",
+        "Math 135: Applied Multivariable Calculus I",
+        "Stat 155: Introduction to Statistical Modeling"
+    ],
+    "skills": {
+        "programming-languages": [
+            "Python",
+            "Java",
+            "TypeScript",
+            "JavaScript",
+            "C",
+            "C++",
+            "Swift",
+            "HTML/CSS",
+            "Markdown",
+            "R"
+        ],
+        "frameworks": [
+            "Django",
+            "Flask",
+            "React",
+            "Node.js",
+            "Express.js",
+            "Tauri",
+            "SpriteKit",
+            "RStudio"
+        ],
+        "tools": [
+            "Git",
+            "GitHub/GitHub Desktop",
+            "VS Code",
+            "Xcode",
+            "Unity",
+            "Figma",
+            "WordPress",
+            "Microsoft Office",
+            "Google Workspace"
+        ],
+        "development-skills": [
+            "Front-end Development",
+            "Back-end Development",
+            "Full-stack Development",
+            "Web Development",
+            "Desktop Application Development",
+            "Game Development"
+        ],
+        "technical-skills": [
+            "Algorithms",
+            "Data Structures",
+            "Databases",
+            "Debugging",
+            "Documentation",
+            "Object-Oriented Programming",
+            "Parallel Processing/Programming",
+            "Prototyping",
+            "RESTful API",
+            "UI/UX Design",
+            "User Testing"
+        ],
+        "soft-skills": [
+            "Adaptability",
+            "Collaboration",
+            "Communication",
+            "Creativity",
+            "Critical Thinking",
+            "Flexibility",
+            "Leadership",
+            "Organization",
+            "Problem-Solving",
+            "Time Management",
+            "Writing"
+        ],
+        "languages": [
+            "English (Native)",
+            "French (Professional Proficiency)",
+            "Spanish (Professional Proficiency)",
+            "Malagasy (Limited Proficiency)"
+        ]
+    },
+
+
+    "projects": [
+        {
+            "title": "TaskManager",
+            "description": "Co-founded and developed a task management desktop application using TypeScript, JavaScript, HTML, CSS. Implemented front-end features such as drag-and-drop task organization, customizable themes, and real-time collaboration. Utilized Tauri to create a lightweight and efficient desktop application that integrates seamlessly with the user's operating system.",
+            "technologies": ["TypeScript", "JavaScript", "HTML", "CSS", "Tauri"],
+            "link": "https://www.forkbomb2491.dev/taskmgr/"
+        },
+        {
+            "title": "Habbit",
+            "description": "Designed and developed desktop application using TypeScript, Angular, HTML and CSS, creating effective user interface and functionality",
+            "technologies": ["TypeScript", "Angular", "HTML", "CSS"],
+            "link": "https://github.com/kandriam/habbit-prototype"
+        }
+    ],
+
+    "work-experience": [
+        {
+            "title": "Front-End Programmer, Independent Contractor",
+            "company": "Collagia",
+            "timeframe": "September 2025-Present",
+            "responsibilities": [
+                "Design, develop and implement functional front-end of chatbot window for the Collagia software using Angular, TypeScript, HTML and CSS",
+                "Work with client to design and implement feature effectively",
+                "Connect chatbot frontend to chatbot API backend"
+            ]
+        },
+        {
+            "title": "Lead Preceptor",
+            "company": "Macalester College",
+            "timeframe": "January 2023 - May 2025",
+            "responsibilities": [
+                "Developed and taught introductory Computer Science and Software Development courses, improving student understanding of programming concepts",
+                "Designated work, developed and organized class material, and facilitated communication between preceptors and instructors, enhancing course coordination",
+                "Graded students’ programming assignments throughout the semester and provided constructive feedback",
+                "Held office hours and meetings to support students with programming assignments, projects and teaching in Python"
+            ]
+        },
+        {
+            "title": "Desk Worker and Data Analyst",
+            "company": "Madagascar Vet School",
+            "timeframe": "June 2022 - August 2022",
+            "responsibilities": [
+                "Organized, sorted and analyzed data of chicken vaccinations using Excel and RStudio",
+                "Managed and reported inventory at the vet school, organize physical and digital inventory",
+                "Welcomed customers and communicated with faculty concerning incoming and outgoing animals"
+            ]
+        },
+        {
+            "title": "Office Worker, Macalester College (Math, Statistics, Computer Science (MSCS))",
+            "company": "Macalester College",
+            "timeframe": "September 2021 - May 2022",
+            "responsibilities": [
+                "Organized and assisted faculty with educational materials, ensuring timely delivery to professors' offices and classrooms",
+                "Organized, set up and supervised regular events for the MSCS Department, enhancing departmental engagement and collaboration"
+            ]
+        }
+    ]
+}
