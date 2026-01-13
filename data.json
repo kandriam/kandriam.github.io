@@ -40,6 +40,7 @@
             "R"
         ],
         "frameworks": [
+            "Angular",
             "Django",
             "Flask",
             "React",
@@ -115,6 +116,12 @@
             "description": "Designed and developed desktop application using TypeScript, Angular, HTML and CSS, creating effective user interface and functionality",
             "technologies": ["TypeScript", "Angular", "HTML", "CSS"],
             "link": "https://github.com/kandriam/habbit-prototype"
+        },
+        {
+            "title": "Worldify",
+            "description":"An application to organize created worlds for any purpose, such as writing, tabletop RPGs, or game development.",
+            "technologies": ["TypeScript", "Angular", "HTML", "CSS"],
+            "link": ""
         }
     ],
 

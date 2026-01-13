@@ -3,233 +3,120 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kaliana Andriamananjara-Cunderlik</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
+    <!-- <script src="script.js" defer></script> -->
+     <script src="script.js"></script>
 </head>
 
 <body>
-    <div class="topnav">
+    <div class="nav-bar">
         <div>
             <a href="#home">Home</a>
             <a href="#projects">Projects</a>
-            <a href="#writing">Writing</a>
         </div>
     </div>
-
-    <div class="ho-div">
-        <div class="primary-container">
-            <div class="vert-div">
-                <h1>Kaliana Andriamananjara-Cunderlik</h1>
-                <div class="secondary-container">
-                    <h2>About Me</h2>
-                    <p>Passionate front-end programmer with a strong foundation in computer science and experience in both front-end and back-end programming.</p>
-                    <p>Co-founded and developed a task management desktop application using TypeScript, JavaScript, HTML, CSS.</p>
-                    <p>Proficient in Python, Java and various web programming languages such as TypeScript and JavaScript.</p>
-                </div>
-            </div>
-        </div>
-        <div class="secondary-container">
-            <h2>Contact</h2>
-            <p>St Paul, MN, USA</p>
-            <p><a href="mailto:kandriam@macalester.edu">kandriam@macalester.edu</a></p>
-            <p><a href="http://www.linkedin.com/in/kandriam/">linkedin.com/in/kandriam</a></p>
-            <p><a href="https://github.com/kandriam">github.com/kandriam</a></p>
-            <p>(+1) 651-815-7217</p>
+    <div id="home">
+        <h1 id="name">Kaliana Andriamananjara-Cunderlik</h1>
+        <h2 id="title">Software Developer</h2>
+        <div class="ho-div primary-container">
+            <h2>Full Stack Developer</h2>
+            <h2>Frontend Developer</h2>
+            <h2>Backend Developer</h2>
         </div>
     </div>
-
-    <div class="primary-container">
-        <h2>Education</h2>
-        <div class="secondary-container">
-            <h3>Macalester College, BA</h3>
-            <p><i>Completed 17 May 2025</i></p>
-            <ul>
-                <li>Computer Science Major</li>
-                <ul>
-                    <li>Camp Endowed Prize in Computer Science</li>
-                </ul>
-                <li>English (Creative Writing) Major <a class="secondary-button" onclick="toggleEnglish()">Toggle English</a></li>
-            </ul>
-        </div>
-        <div class="secondary-container">
-            <h3>Relevant Courses</h3>
-            <div class="ho-div">
-                <div class="vert-div comp-sci">
-                    <div>
-                        <ul>
-                            <li>Comp 128, Data Structures</li>
-                            <li>Comp 221: Algorithm Design and Analysis</li>
-                            <li>Comp 225: Software Design and Development</li>
-                            <li>Comp 325: Video Games: Coding and Narrative</li>
-                            <li>Comp 240: Computer Systems</li>
-                            <li>Comp 381: Programming Languages</li>
-                            <li>Comp 445: Parallel and Distributed Processing</li>
-                            <li>Comp 446: Internet Computing</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <ul>
-                            <li>Math 279: Discrete Mathematics</li>
-                            <li>Math 135: Applied Multivariable Calculus I</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <ul>
-                            <li>Stat 155: Introduction to Statistical Modeling</li>
-                        </ul>
-                    </div>
+    <div id="technologies" style="display: grid; grid-template-columns: 1fr 1fr;">
+        <div id="programming-languages" class="secondary-container">
+            <div class="header">
+                <h1>Programming Languages</h1>
+            </div>
+            <div id="pl-content" class="content">
+                <div class="pl-container">
+                    <img class="pl-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" />
+                    Python
                 </div>
-                <div class="english">
-                    <ul>
-                        <li>Engl 150: Introduction to Creative Writing</li>
-                        <li>Engl 294: Writer's Sketchbook</li>
-                        <li>Engl 105: Identities and Differences in US Literature</li>
-                        <li>Engl 262: Literature and the Natural World</li>
-                        <li>Engl 280: Crafts of Writing: Poetry</li>
-                        <li>Engl 294: Reading Along the Silk Roads</li>
-                        <li>Engl 294: Dickinson</li>
-                        <li>Engl 294: Crafts of Writing: Worldbuilding</li>
-                        <li>Engl 384: Langston Hughes: Global Writer</li>
-                        <li>Engl 406: Projects in Creative Writing</li>
-                    </ul>
+                <div class="pl-container">
+                    <img class="pl-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" />
+                    Java
+                </div>
+                <div class="pl-container">
+                    <img class="pl-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" />
+                    TypeScript
+                </div>
+                <div class="pl-container">
+                    <img class="pl-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" />
+                    JavaScript
+                </div>
+                <div class="pl-container">
+                    <img class="pl-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg" />
+                    C
+                </div>
+                <div class="pl-container">
+                    <img class="pl-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" />
+                    C++
+                </div>
+                <div class="pl-container">
+                    <img class="pl-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/swift/swift-original.svg" />
+                    Swift
+                </div>
+                <div class="pl-container">
+                    <img class="pl-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" />
+                    HTML/CSS
+                </div>
+                <div class="pl-container">
+                    <img class="pl-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/r/r-original.svg" />
+                    R
+                </div>
+            </div>
+        </div>
+        <div id="frameworks" class="secondary-container">
+            <div class="header">
+                <h1>Frameworks</h1>
+            </div>
+            <div id="fw-content" class="content">
+                <div class="pl-container">
+                    <img class="pl-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angularjs/angularjs-original.svg" />
+                    Angular
+                </div>
+                <div class="pl-container">
+                    <img class="pl-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/django/django-plain.svg" />
+                    Django
+                </div>
+                <div class="pl-container">
+                    <img class="pl-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flask/flask-original.svg" />
+                    Flask
+                </div>
+                <div class="pl-container">
+                    <img class="pl-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" />
+                    React
+                </div>
+                <div class="pl-container">
+                    <img class="pl-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" />
+                    Node.js
+                </div>
+                <div class="pl-container">
+                    <img class="pl-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg" />
+                    Express.js
+                </div>
+                <div class="pl-container">
+                    <img class="pl-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tauri/tauri-original.svg" />
+                    Tauri
+                </div>
+                <div class="pl-container">
+                    <img class="pl-icon" src="https://developer.apple.com/assets/elements/icons/spritekit/spritekit-96x96_2x.png" />
+                    SpriteKit
+                </div>
+                <div class="pl-container">
+                    
+                    <img class="pl-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/rstudio/rstudio-original.svg" />
+                    RStudio
                 </div>
             </div>
         </div>
     </div>
-
-    <div class="primary-container">
-        <h2>Skills</h2>
-        <div class="ho-div comp-sci">
-            <div class="secondary-container comp-sci">
-                <h3>Programming Languages & Frameworks</h3>
-                <div class="ho-div">
-                    <ul>
-                        <li>Python</li>
-                        <li>Java</li>
-                        <li>JavaScript</li>
-                        <li>TypeScript</li>
-                        <li>Swift</li>
-                        <li>C</li>
-                        <li>C#</li>
-                        <li>SQL</li>
-                        <li>Rust</li>
-                        <li>HTML/CSS</li>
-                        <li>Markdown</li>
-                    </ul>
-                    <ul>
-                        <li>Django</li>
-                        <li>Flask</li>
-                        <li>jQuery</li>
-                        <li>React</li>
-                        <li>Angular</li>
-                        <li>Tauri</li>
-                        <li>SpriteKit</li>
-                    </ul>
-                </div>
-            </div>
-            <div>
-                <div class="secondary-container comp-sci">
-                    <h3>Tools</h3>
-                    <ul>
-                        <li>VS Code</li>
-                        <li>PyCharm</li>
-                        <li>Github</li>
-                        <li>Unity</li>
-                        <li>Git</li>
-                        <li>Figma</li>
-                    </ul>
-                </div>
-                <!-- <div class="secondary-container comp-sci">
-                    <h3>Frameworks</h3>
-                    <ul>
-                        <li>Django</li>
-                        <li>Flask</li>
-                        <li>jQuery</li>
-                        <li>React</li>
-                        <li>Angular</li>
-                        <li>Tauri</li>
-                        <li>SpriteKit</li>
-                    </ul>
-                </div> -->
-            </div>
-            <div class="secondary-container comp-sci">
-                <h3>Technical Skills</h3>
-                <div class="ho-div">
-                    <ul>
-                        <li>Front-end Development</li>
-                        <li>Back-end Development</li>
-                        <li>Full-stack Development</li>
-                        <li>Mobile Development</li>
-                        <li>Web Development</li>
-                        <li>Game Development</li>
-                    </ul>
-                    <ul>
-                        <li>Prototyping</li>
-                        <li>UI/UX Design</li>
-                        <li>User Testing</li>
-                        <li>Debugging</li>
-                        <li>Documentation</li>
-                        <li>RESTful API</li>
-                        <li>Object-Oriented Programming</li>
-                        <li>Data Structures</li>
-                        <li>Algorithms</li>
-                        <li>Databases</li>
-                        <li>Parallel Processing/Programming</li>
-                    </ul>
-                </div>
-            </div> 
+    <div id="projects" class="secondary-container">
+        <div class="header">
+            <h1>Projects</h1>
         </div>
-        <div class="ho-div">
-            <div class="secondary-container">
-                <h3>Practical Skills</h3>
-                <ul>
-                    <li>Adaptability</li>
-                    <li>Communication</li>
-                    <li>Collaboration</li>
-                    <li>Creativity</li>
-                    <li>Documentation</li>
-                    <li>Flexibility</li>
-                    <li>Organization</li>
-                    <li>Problem Solving</li>
-                    <li>Writing</li>
-                </ul>
-            </div>
-
-            <div class="secondary-container">
-                <h3>Softwares</h3>
-                <div class="ho-div">
-                    <ul>
-                        <li>Microsoft Office</li>
-                        <ul>
-                            <li>Teams</li>
-                            <li>Word</li>
-                            <li>Excel</li>
-                            <li>Outlook</li>
-                        </ul>
-                    </ul>
-                    <ul>
-                        <li>Google Workspace</li>
-                        <ul>
-                            <li>Google Docs</li>
-                            <li>Google Sheets</li>
-                            <li>Google Slides</li>
-                            <li>Google Drive</li>
-                        </ul>
-                    </ul>
-                    <ul>
-                        <li>Github Desktop</li>
-                        <li>Figma</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="secondary-container">
-                <h3>Natural Languages</h3>
-                <ul>
-                    <li>English (First Language)</li>
-                    <li>French (Proficient)</li>
-                    <li>Spanish (Proficient)</li>
-                    <li>Malagasy (Elementary)</li>
-                </ul>
-            </div>
-        </div> 
-    </div>
+        <div id="projects-content" class="content">
+            <div></div>
+        </div>
 </body>
