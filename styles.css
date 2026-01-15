@@ -39,15 +39,21 @@ body {
 h1 {
     font-size: x-large;
     color: var(--sec-01);
+    margin-bottom: 15px;
+    text-decoration: underline var(--ter-01) wavy;
 }
 h2 {
     font-size: large;
+    text-decoration: underline var(--ter-01) wavy;
+    margin-bottom: 15px;
 }
 h3 {
     font-size: medium;
+    margin-bottom: 15px;
 }
 p {
     font-size: small;
+    margin-bottom: 15px;
 }
 
 
@@ -67,7 +73,7 @@ li {
 .primary-container {
     margin: 25px;
     padding: 25px;
-    /* border: 1px solid var(--pri-04); */
+    border: 1px solid var(--pri-03);
     justify-content: space-between;
     border-radius: 15px;
     /* width: fit-content; */
@@ -77,13 +83,14 @@ li {
     min-width: fit-content;
     margin: 15px;
     padding: 15px;
-    border: 1px solid var(--pri-04);
+    border: 1px solid var(--pri-03);
     justify-content: space-between;
     border-radius: 15px;
     transition: box-shadow 0.3s ease-in-out;
     
     &:hover {
         box-shadow: 0 4px 8px 0 black;
+        border-color: var(--pri-01);
     }
 }
 
@@ -192,36 +199,36 @@ li {
 
 
 
-.pl-icon {
-    width: 25px;
-    height: 25px;
+.pl-icon, .fw-icon {
+    width: 15px;
+    height: 15px;
     margin-right: 5px;
     background-color: white;
     border-radius: 10px;
     padding: 5px;
 }
 
-.pl-container {
+.prog-lang, .framework, .technology {
     display: flex;
     align-items: center;
     margin: 5px 0;
-    padding: 20px;
+    padding: 10px;
     border-radius: 10px;
-    background-color: var(--pri-01);
-    color: var(--pri-03);
+    background-color: var(--pri-04);
+    color: var(--pri-02);
     justify-content: space-between;
+    font-size: x-small;
     
     &:hover {
-        background-color: var(--pri-02);
-        color: var(--pri-04);
+        background-color: var(--pri-03);
+        color: var(--pri-01);
     }
 }
 
 .content {
-    padding: 20px;
     display: grid;
-    grid-template-columns: repeat(3, minmax(200px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(3, minmax(110px, 1fr));
+    gap: 10px;
 }
 
 .project {
@@ -229,27 +236,47 @@ li {
     border-radius: 10px;
     padding: 15px;
 
-    .project-title {
+    .title {
         font-size: large;
         margin-bottom: 10px;
     }
 
-    .project-description {
-        font-size: medium;
+    .description {
+        font-size: xx-small;
     }
 
-    .project-link {
-        border-radius: 10px;
-        margin: 15px 0;
-        padding: 15px;
-        background-color: var(--ter-01);
-        color: var(--sec-02);
-        text-decoration: none;
-        display: block;
+    .technologies {
+        margin-top: 10px;
+        font-size: x-small;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(100px, 1fr));
+        gap: 5px;
+    }
+}
 
-        &:hover {
-            text-decoration: underline;
-            color: var(--sec-01);
-        }
+.github-link {
+    border-radius: 10px;
+    margin: 15px 0;
+    padding: 15px;
+    background-color: var(--ter-01);
+    color: var(--sec-02);
+    text-decoration: none;
+    display: flex;
+    font-size: medium;
+    text-align: center;
+    justify-content: space-between;
+
+
+    &:hover {
+        text-decoration: underline;
+        color: var(--sec-01);
+    }
+
+    &::before {
+        content: url("https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg");
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
     }
 }

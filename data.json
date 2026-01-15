@@ -2,7 +2,9 @@
     "user": {
         "name": "Kaliana Andriamananjara-Cunderlik",
         "about": "Passionate front-end programmer with a strong foundation in computer science and experience in both front-end and back-end programming. Co-founded and developed a task management desktop application using TypeScript, JavaScript, HTML, CSS. Proficient in Python, Java and various web programming languages such as TypeScript and JavaScript.",
-        "location": "St Paul, MN, USA",
+        "location": "St Paul, MN, USA"
+    },
+    "contact": {
         "email": "kandriam@macalester.edu",
         "linkedin": "http://www.linkedin.com/in/kandriam/",
         "github": "https://github.com/kandriam",
@@ -26,82 +28,80 @@
         "Math 135: Applied Multivariable Calculus I",
         "Stat 155: Introduction to Statistical Modeling"
     ],
-    "skills": {
-        "programming-languages": [
-            "Python",
-            "Java",
-            "TypeScript",
-            "JavaScript",
-            "C",
-            "C++",
-            "Swift",
-            "HTML/CSS",
-            "Markdown",
-            "R"
-        ],
-        "frameworks": [
-            "Angular",
-            "Django",
-            "Flask",
-            "React",
-            "Node.js",
-            "Express.js",
-            "Tauri",
-            "SpriteKit",
-            "RStudio"
-        ],
-        "tools": [
-            "Git",
-            "GitHub/GitHub Desktop",
-            "VS Code",
-            "Xcode",
-            "Unity",
-            "Figma",
-            "WordPress",
-            "Microsoft Office",
-            "Google Workspace"
-        ],
-        "development-skills": [
-            "Front-end Development",
-            "Back-end Development",
-            "Full-stack Development",
-            "Web Development",
-            "Desktop Application Development",
-            "Game Development"
-        ],
-        "technical-skills": [
-            "Algorithms",
-            "Data Structures",
-            "Databases",
-            "Debugging",
-            "Documentation",
-            "Object-Oriented Programming",
-            "Parallel Processing/Programming",
-            "Prototyping",
-            "RESTful API",
-            "UI/UX Design",
-            "User Testing"
-        ],
-        "soft-skills": [
-            "Adaptability",
-            "Collaboration",
-            "Communication",
-            "Creativity",
-            "Critical Thinking",
-            "Flexibility",
-            "Leadership",
-            "Organization",
-            "Problem-Solving",
-            "Time Management",
-            "Writing"
-        ],
-        "languages": [
-            "English (Native)",
-            "French (Professional Proficiency)",
-            "Spanish (Professional Proficiency)",
-            "Malagasy (Limited Proficiency)"
-        ]
-    },
+    "programming-languages": [
+        "Python",
+        "Java",
+        "TypeScript",
+        "JavaScript",
+        "C",
+        "C++",
+        "Swift",
+        "HTML/CSS",
+        "Markdown",
+        "R"
+    ],
+    "frameworks": [
+        "Angular",
+        "Django",
+        "Flask",
+        "React",
+        "Node.js",
+        "Express.js",
+        "Tauri",
+        "SpriteKit",
+        "RStudio"
+    ],
+    "tools": [
+        "Git",
+        "GitHub/GitHub Desktop",
+        "VS Code",
+        "Xcode",
+        "Unity",
+        "Figma",
+        "WordPress",
+        "Microsoft Office",
+        "Google Workspace"
+    ],
+    "development-skills": [
+        "Front-end Development",
+        "Back-end Development",
+        "Full-stack Development",
+        "Web Development",
+        "Desktop Application Development",
+        "Game Development"
+    ],
+    "technical-skills": [
+        "Algorithms",
+        "Data Structures",
+        "Databases",
+        "Debugging",
+        "Documentation",
+        "Object-Oriented Programming",
+        "Parallel Processing/Programming",
+        "Prototyping",
+        "RESTful API",
+        "UI/UX Design",
+        "User Testing"
+    ],
+    "soft-skills": [
+        "Adaptability",
+        "Collaboration",
+        "Communication",
+        "Creativity",
+        "Critical Thinking",
+        "Flexibility",
+        "Leadership",
+        "Organization",
+        "Problem-Solving",
+        "Time Management",
+        "Writing"
+    ],
+    "languages": [
+        "English (Native)",
+        "French (Professional Proficiency)",
+        "Spanish (Professional Proficiency)",
+        "Malagasy (Limited Proficiency)"
+    ],
 
 
     "projects": [
@@ -109,7 +109,7 @@
             "title": "TaskManager",
             "description": "Co-founded and developed a task management desktop application using TypeScript, JavaScript, HTML, CSS. Implemented front-end features such as drag-and-drop task organization, customizable themes, and real-time collaboration. Utilized Tauri to create a lightweight and efficient desktop application that integrates seamlessly with the user's operating system.",
             "technologies": ["TypeScript", "JavaScript", "HTML", "CSS", "Tauri"],
-            "link": "https://www.forkbomb2491.dev/taskmgr/"
+            "link": "https://github.com/forkbomb-2491/task-manager"
         },
         {
             "title": "Habbit",
@@ -166,5 +166,22 @@
                 "Organized, set up and supervised regular events for the MSCS Department, enhancing departmental engagement and collaboration"
             ]
         }
-    ]
+    ],
+
+    "icons" : {
+        "email": "https://cdn-icons-png.flaticon.com/512/732/732200.png",
+        "linkedin": "https://cdn-icons-png.flaticon.com/512/174/174857.png",
+        "github": "https://cdn-icons-png.flaticon.com/512/733/733553.png",
+        "phone": "https://cdn-icons-png.flaticon.com/512/597/597177.png",
+
+        "python": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg",
+        "java": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg",
+        "typescript": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg",
+        "javascript": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg",
+        "c": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg",
+        "cplusplus": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg",
+        "swift": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons /swift/swift-original.svg",
+        "htmlcss": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg",
+        "r": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/r/r-original.svg"
+    }
 }

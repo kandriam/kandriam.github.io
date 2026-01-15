@@ -14,6 +14,17 @@ async function getDataArray(arrayName) {
     }
 }
 
+async function getIcon(iconName) {
+    try {
+        const response = await fetch('icons.json');
+        const icons = await response.json();
+        return icons[iconName] || '';
+    } catch (error) {
+        console.error('Error fetching icons.json:', error);
+        return '';
+    }
+}
+
 async function fillContentSection(arrayName, sectionId, itemType) {
     const items = await getDataArray(arrayName);
     const section = document.getElementById(sectionId);
@@ -22,18 +33,23 @@ async function fillContentSection(arrayName, sectionId, itemType) {
         return;
     }
     section.innerHTML = '';
-    items.forEach(item => {
+    items.forEach(async item => {
         const itemElem = document.createElement('div');
-        itemElem.className = itemType;
+        itemElem.classList.add('secondary-container', `${itemType}`);
         let techList = '';
+
         if (Array.isArray(item.technologies)) {
-            techList = `<div class="${itemType}-info">${item.technologies.join(', ')}</div>`;
+            techList = `<div class="technologies">
+                <div class="technology">
+                ${item.technologies.join('</div><div class="technology">')}
+                </div>
+            </div>`;
         }
         itemElem.innerHTML = `
-            <div class="${itemType}-title">${item.title}</div>
-            <div class="${itemType}-description">${item.description || ''}</div>
+            <h2 class="title">${item.title}</h2>
+            <div class="description">${item.description || ''}</div>
+            ${item.link ? `<a class="${itemType}-link github-link" href="${item.link}" target="_blank">View</a>` : ''}
             ${techList}
-            ${item.link ? `<a class="${itemType}-link" href="${item.link}" target="_blank">View Project</a>` : ''}
         `;
         section.appendChild(itemElem);
     });
