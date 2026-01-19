@@ -69,6 +69,15 @@ li {
     margin: 5px;
 }
 
+a {
+    color: var(--sec-02);
+    text-decoration: underline var(--ter-01) dotted;
+
+    &:hover {
+        color: var(--sec-01);
+    }
+}
+
 /* Containers */
 .primary-container {
     margin: 25px;
@@ -198,17 +207,32 @@ li {
 }
 
 
+#home {
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
 
-.pl-icon, .fw-icon {
-    width: 15px;
-    height: 15px;
+
+.social-platform {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: var(--ter-01);
+    border-radius: 10px;
+}
+
+.pl-icon, .fw-icon, .social-icon {
+    width: 25px;
+    height: 25px;
     margin-right: 5px;
     background-color: white;
     border-radius: 10px;
     padding: 5px;
 }
 
-.prog-lang, .framework, .technology {
+.technology {
     display: flex;
     align-items: center;
     margin: 5px 0;
@@ -231,6 +255,12 @@ li {
     gap: 10px;
 }
 
+#projects-content {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+    gap: 15px;
+}
+
 .project {
     border: 1px solid var(--pri-04);
     border-radius: 10px;
@@ -242,17 +272,18 @@ li {
     }
 
     .description {
-        font-size: xx-small;
+        font-size: small;
     }
 
     .technologies {
         margin-top: 10px;
-        font-size: x-small;
+        font-size: small;
         display: grid;
         grid-template-columns: repeat(2, minmax(100px, 1fr));
         gap: 5px;
     }
 }
+
 
 .github-link {
     border-radius: 10px;

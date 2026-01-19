@@ -1,3 +1,14 @@
+// Load content when DOM is fully loaded
+document.addEventListener('DOMContentLoaded', async () => {
+    console.log('Script loaded and DOM is ready.');
+
+    loadProgrammingLanguagesSection('programming-languages', 'pl-content');
+    loadFrameworksSection('frameworks', 'fw-content');
+    
+    loadProjectSection('projects', 'projects-content');
+    loadIcons();
+    
+});
 
 async function getDataArray(arrayName) {
     try {
@@ -14,51 +25,125 @@ async function getDataArray(arrayName) {
     }
 }
 
-async function getIcon(iconName) {
+async function loadIcons() {
     try {
-        const response = await fetch('icons.json');
+        const response = await fetch('icons/icon-links.json');
         const icons = await response.json();
-        return icons[iconName] || '';
+        for (const category in icons) {
+            const iconSet = icons[category];
+            for (const iconName in iconSet) {
+                // Find all elements with class `${iconName}-icon`
+                const elements = document.getElementsByClassName(`${iconName}-icon`);
+                for (const elem of elements) {
+                    elem.src = iconSet[iconName];
+                }
+            }
+        }
     } catch (error) {
-        console.error('Error fetching icons.json:', error);
+        console.error('Error loading icons:', error);
+    }
+}
+
+async function getIcon(iconName) {
+    console.log(`Fetching icon for: ${iconName}`);
+    try {
+        const response = await fetch('icons/icon-links.json');
+        const icons = await response.json();
+        // Adjust for nested structure under "social-platforms"
+        if (icons["social-platforms"] && icons["social-platforms"][iconName]) {
+            return icons["social-platforms"][iconName];
+        }
+        return '';
+    } catch (error) {
+        console.error('Error fetching icons/icon-links.json:', error);
         return '';
     }
 }
 
-async function fillContentSection(arrayName, sectionId, itemType) {
-    const items = await getDataArray(arrayName);
+async function loadProjectSection(arrayName, sectionId,) {
+    const projects = await getDataArray(arrayName);
     const section = document.getElementById(sectionId);
     if (!section) {
         console.error(`No element with id "${sectionId}" found.`);
         return;
     }
     section.innerHTML = '';
-    items.forEach(async item => {
+    projects.forEach(async project => {
         const itemElem = document.createElement('div');
-        itemElem.classList.add('secondary-container', `${itemType}`);
-        let techList = '';
-
-        if (Array.isArray(item.technologies)) {
-            techList = `<div class="technologies">
-                <div class="technology">
-                ${item.technologies.join('</div><div class="technology">')}
-                </div>
-            </div>`;
+        itemElem.classList.add('secondary-container', `project`);
+        if (Array.isArray(project.technologies)) {
+            for (const [index, tech] of project.technologies.entries()) {
+                project.technologies[index] = `<div class="technology prog-lang">
+                                                    <img class="pl-icon ${tech.toLowerCase()}-icon" src="" alt="${tech} icon"/>
+                                                    <h2 class="tech-name">${tech}</h2>
+                                                </div>`;
+            }
         }
+
         itemElem.innerHTML = `
-            <h2 class="title">${item.title}</h2>
-            <div class="description">${item.description || ''}</div>
-            ${item.link ? `<a class="${itemType}-link github-link" href="${item.link}" target="_blank">View</a>` : ''}
-            ${techList}
+            <h2 class="title">${project.title}</h2>
+            <div class="description">${project.description || ''}</div>
+            ${project.link ? `<a class="project-link github-link" href="${project.link}" target="_blank"><h2>View</h2></a>` : ''}
+            <div class="technologies">
+            ${project.technologies ? project.technologies.join('') : ''}
+            </div>
         `;
         section.appendChild(itemElem);
     });
 }
 
+async function loadProgrammingLanguagesSection(arrayName, sectionId) {
+    const languages = await getDataArray(arrayName);
+    const section = document.getElementById(sectionId);
+    if (!section) {
+        console.error(`No element with id "${sectionId}" found.`);
+        return;
+    }
+    section.innerHTML = '';
+    languages.forEach(async language => {
+        const itemElem = document.createElement('div');
+        itemElem.classList.add(`prog-lang`, `technology`);
+        itemElem.innerHTML = `
+            <img class="pl-icon ${language.toLowerCase()}-icon" src="" alt="${language} icon"/>
+            <h2 class="title">${language}</h2>
+        `;
+        section.appendChild(itemElem);
+    });
+}
 
-document.addEventListener('DOMContentLoaded', async () => {
-    console.log('Script loaded and DOM is ready.');
+async function loadFrameworksSection(arrayName, sectionId) {
+    const frameworks = await getDataArray(arrayName);
+    const section = document.getElementById(sectionId);
+    if (!section) {
+        console.error(`No element with id "${sectionId}" found.`);
+        return;
+    }
+    section.innerHTML = '';
+    frameworks.forEach(async framework => {
+        const itemElem = document.createElement('div');
+        itemElem.classList.add(`framework`, `technology`);
+        itemElem.innerHTML = `
+            <img class="fw-icon ${framework.toLowerCase()}-icon" src="" alt="${framework} icon"/>
+            <h2 class="title">${framework}</h2>
+        `;
+        section.appendChild(itemElem);
+    });
+}
 
-    fillContentSection('projects', 'projects-content', 'project');
-    
-});
+async function loadTechnologies (techArray, containerId) {
+    const container = document.getElementById(containerId);
+    if (!container) {
+        console.error(`No element with id "${containerId}" found.`);
+        return;
+    }
+    container.innerHTML = '';
+    techArray.forEach(async tech => {
+        const itemElem = document.createElement('div');
+        itemElem.classList.add('technology');
+        itemElem.innerHTML = `
+            <img class="tech-icon ${tech.toLowerCase()}-icon" src="" alt="${tech} icon"/>
+            <h2 class="title">${tech}</h2>
+        `;
+        container.appendChild(itemElem);
+    });
+}

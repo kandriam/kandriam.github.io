@@ -1,0 +1,33 @@
+{
+    "social-platforms" : {
+        "email": "https://cdn-icons-png.flaticon.com/512/732/732200.png",
+        "linkedin": "https://cdn-icons-png.flaticon.com/512/174/174857.png",
+        "github": "https://cdn-icons-png.flaticon.com/512/733/733553.png",
+        "phone": "https://cdn-icons-png.flaticon.com/512/597/597177.png"
+    },
+
+    "programming-languages": {
+        "python": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg",
+        "java": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg",
+        "typescript": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg",
+        "javascript": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg",
+        "c": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg",
+        "c++": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg",
+        "swift": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons /swift/swift-original.svg",
+        "html": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg",
+        "css": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg",
+        "r": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/r/r-original.svg"
+    },
+
+    "frameworks": {
+        "angular": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angularjs/angularjs-original.svg",
+        "django": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/django/django-plain.svg",
+        "flask": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flask/flask-original.svg",
+        "react": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
+        "node.js": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg",
+        "express.js": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg",
+        "tauri": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tauri/tauri-plain.svg",
+        "spritekit": "https://developer.apple.com/assets/elements/icons/spritekit/spritekit-96x96_2x.png",
+        "rstudio": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/rstudio/rstudio-original.svg"
+    }
+}
