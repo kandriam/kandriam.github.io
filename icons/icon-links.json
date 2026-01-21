@@ -1,33 +1,29 @@
 {
-    "social-platforms" : {
-        "email": "https://cdn-icons-png.flaticon.com/512/732/732200.png",
-        "linkedin": "https://cdn-icons-png.flaticon.com/512/174/174857.png",
-        "github": "https://cdn-icons-png.flaticon.com/512/733/733553.png",
-        "phone": "https://cdn-icons-png.flaticon.com/512/597/597177.png"
-    },
-
-    "programming-languages": {
-        "python": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg",
-        "java": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg",
-        "typescript": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg",
-        "javascript": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg",
-        "c": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg",
-        "c++": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg",
-        "swift": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons /swift/swift-original.svg",
-        "html": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg",
-        "css": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg",
-        "r": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/r/r-original.svg"
-    },
-
-    "frameworks": {
-        "angular": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angularjs/angularjs-original.svg",
-        "django": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/django/django-plain.svg",
-        "flask": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flask/flask-original.svg",
-        "react": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
-        "node.js": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg",
-        "express.js": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg",
-        "tauri": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tauri/tauri-plain.svg",
-        "spritekit": "https://developer.apple.com/assets/elements/icons/spritekit/spritekit-96x96_2x.png",
-        "rstudio": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/rstudio/rstudio-original.svg"
+    "svg-icons": {
+        "mail": "icons/contact/envelope-icon.svg",
+        "linkedin": "icons/contact/linkedin-icon.svg",
+        "github": "icons/contact/github-icon.svg",
+        "phone": "icons/contact/phone-icon.svg",
+        "location": "icons/contact/location-icon.svg",
+        "python":"icons/python-original.svg",
+        "java":"icons/java-original.svg",
+        "typescript":"icons/typescript-original.svg",
+        "javascript":"icons/javascript-original.svg",
+        "c":"icons/c-original.svg",
+        "c++":"icons/cplusplus-original.svg",
+        "swift":"icons/swift-original.svg",
+        "html":"icons/html5-original.svg",
+        "css":"icons/css3-original.svg",
+        "r":"icons/r-original.svg",
+        "angular":"icons/angularjs-original.svg",
+        "django":"icons/django-plain.svg",
+        "flask":"icons/flask-original.svg",
+        "react":"icons/react-original.svg",
+        "node.js":"icons/nodejs-original.svg",
+        "express.js":"icons/express-original.svg",
+        "tauri":"icons/tauri-plain.svg",
+        "rstudio":"icons/rstudio-original.svg",
+        "xcode":"icons/xcode-original.svg",
+        "sqlite":"icons/sqlite-original.svg"
     }
 }

@@ -29,13 +29,25 @@ async function loadIcons() {
     try {
         const response = await fetch('icons/icon-links.json');
         const icons = await response.json();
-        for (const category in icons) {
-            const iconSet = icons[category];
-            for (const iconName in iconSet) {
-                // Find all elements with class `${iconName}-icon`
-                const elements = document.getElementsByClassName(`${iconName}-icon`);
-                for (const elem of elements) {
-                    elem.src = iconSet[iconName];
+        const iconSet = icons['svg-icons'] || {};
+        for (const iconName in iconSet) {
+            console.log(`Setting icon for: ${iconName}`);
+            const elements = document.getElementsByClassName(`${iconName}-icon`);
+            for (const elem of elements) {
+                elem.src = iconSet[iconName];
+            }
+        }
+        // Additionally, set src for all .pl-icon elements based on their class
+        const plIcons = document.getElementsByClassName('pl-icon');
+        for (const elem of plIcons) {
+            for (const cls of elem.classList) {
+                if (cls.endsWith('-icon') && cls !== 'pl-icon') {
+                    const lang = cls.replace('-icon', '');
+                    if (iconSet[lang]) {
+                        elem.src = iconSet[lang];
+                    } else {
+                        elem.src = '';
+                    }
                 }
             }
         }
@@ -50,10 +62,18 @@ async function getIcon(iconName) {
         const response = await fetch('icons/icon-links.json');
         const icons = await response.json();
         // Adjust for nested structure under "social-platforms"
-        if (icons["social-platforms"] && icons["social-platforms"][iconName]) {
-            return icons["social-platforms"][iconName];
+        if (icons[iconName]) {
+            return icons[iconName];
         }
-        return '';
+            const iconSet = icons['svg-icons'] || {};
+            if (iconSet[iconName]) {
+                return iconSet[iconName];
+            }
+            // Try lowercased version for flexibility
+            if (iconSet[iconName.toLowerCase()]) {
+                return iconSet[iconName.toLowerCase()];
+            }
+            return '';
     } catch (error) {
         console.error('Error fetching icons/icon-links.json:', error);
         return '';
@@ -73,8 +93,9 @@ async function loadProjectSection(arrayName, sectionId,) {
         itemElem.classList.add('secondary-container', `project`);
         if (Array.isArray(project.technologies)) {
             for (const [index, tech] of project.technologies.entries()) {
+                icon = await getIcon(tech.toLowerCase());
                 project.technologies[index] = `<div class="technology prog-lang">
-                                                    <img class="pl-icon ${tech.toLowerCase()}-icon" src="" alt="${tech} icon"/>
+                                                    <img class="pl-icon ${tech.toLowerCase()}-icon" src=${icon} alt="${tech} icon"/>
                                                     <h2 class="tech-name">${tech}</h2>
                                                 </div>`;
             }
@@ -103,8 +124,9 @@ async function loadProgrammingLanguagesSection(arrayName, sectionId) {
     languages.forEach(async language => {
         const itemElem = document.createElement('div');
         itemElem.classList.add(`prog-lang`, `technology`);
+        icon = await getIcon(language.toLowerCase());
         itemElem.innerHTML = `
-            <img class="pl-icon ${language.toLowerCase()}-icon" src="" alt="${language} icon"/>
+            <img class="pl-icon ${language.toLowerCase()}-icon" src="${icon}" alt="${language} icon"/>
             <h2 class="title">${language}</h2>
         `;
         section.appendChild(itemElem);
@@ -122,8 +144,9 @@ async function loadFrameworksSection(arrayName, sectionId) {
     frameworks.forEach(async framework => {
         const itemElem = document.createElement('div');
         itemElem.classList.add(`framework`, `technology`);
+        icon = await getIcon(framework.toLowerCase());
         itemElem.innerHTML = `
-            <img class="fw-icon ${framework.toLowerCase()}-icon" src="" alt="${framework} icon"/>
+            <img class="fw-icon ${framework.toLowerCase()}-icon" src="${icon}" alt="${framework} icon"/>
             <h2 class="title">${framework}</h2>
         `;
         section.appendChild(itemElem);
