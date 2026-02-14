@@ -5,6 +5,7 @@
         "github": "icons/contact/github-icon.svg",
         "phone": "icons/contact/phone-icon.svg",
         "location": "icons/contact/location-icon.svg",
+        
         "python":"icons/python-original.svg",
         "java":"icons/java-original.svg",
         "typescript":"icons/typescript-original.svg",
@@ -15,6 +16,7 @@
         "html":"icons/html5-original.svg",
         "css":"icons/css3-original.svg",
         "r":"icons/r-original.svg",
+        "rust":"icons/rust-original.svg",
         "angular":"icons/angularjs-original.svg",
         "django":"icons/django-plain.svg",
         "flask":"icons/flask-original.svg",
@@ -24,6 +26,12 @@
         "tauri":"icons/tauri-plain.svg",
         "rstudio":"icons/rstudio-original.svg",
         "xcode":"icons/xcode-original.svg",
-        "sqlite":"icons/sqlite-original.svg"
+        "sqlite":"icons/sqlite-original.svg",
+        "figma": "icons/figma-original.svg",
+        "vs-code": "icons/vscode-original.svg",
+        "git": "icons/git-original.svg",
+
+        "wordpress": "icons/wordpress-original.svg",
+        "unity": "icons/unity-original.svg"
     }
 }

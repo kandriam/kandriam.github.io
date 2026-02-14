@@ -5,15 +5,20 @@
 :root {
     /* Main Theme */
     
-    --pri-01: #a8e1f2;
-    --pri-02: #78c2e5;
-    --pri-03: #49a2d4;
-    --pri-04: #2a7ca0;
+    --blu-01: #a8e1f2;
+    --blu-02: #78c2e5;
+    --blu-03: #49a2d4;
+    --blu-04: #2a7ca0;
+
+    --pur-01: #d9a1f2;
+    --pur-02: #b36de5;
+    --pur-03: #8c39d4;
+    --pur-04: #65109f;
     
-    --sec-01: #4c9a6d;
-    --sec-02: #3b7a5c;
-    --ter-01: #5c4b7f;
-    --ter-02: #332b52;
+    --bla-01: #999999;
+    --bla-02: #666666;
+    --bla-03: #333333;
+    --bla-04: #000000;
 
     /* Eng */
     --eng-01: #fcae61;
@@ -32,28 +37,29 @@ body {
     margin: 10px;
     /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
     font-family: 'Lucida Console', 'Courier New', monospace;
-    color: var(--sec-02);
-    background-color: var(--ter-02);
+    color: var(--bla-02);
+    background-color: var(--bla-04);
 }
 
 h1 {
     font-size: x-large;
-    color: var(--sec-01);
+    color: var(--bla-01);
     margin-bottom: 15px;
-    text-decoration: underline var(--ter-01) wavy;
+    text-decoration: underline var(--bla-01) wavy;
 }
 h2 {
     font-size: large;
-    text-decoration: underline var(--ter-01) wavy;
+    /* text-decoration: underline var(--bla-01) wavy; */
     margin-bottom: 15px;
 }
 h3 {
-    font-size: medium;
+    font-size: large;
     margin-bottom: 15px;
 }
 p {
-    font-size: small;
-    margin-bottom: 15px;
+    text-indent: 10px;
+    font-size: large;
+    margin-bottom: 10px;
 }
 
 
@@ -70,11 +76,11 @@ li {
 }
 
 a {
-    color: var(--sec-02);
-    text-decoration: underline var(--ter-01) dotted;
+    color: var(--bla-02);
+    text-decoration: underline var(--bla-01) dotted;
 
     &:hover {
-        color: var(--sec-01);
+        color: var(--bla-01);
     }
 }
 
@@ -82,7 +88,7 @@ a {
 .primary-container {
     margin: 25px;
     padding: 25px;
-    border: 1px solid var(--pri-03);
+    border: 1px solid var(--blu-03);
     justify-content: space-between;
     border-radius: 15px;
     /* width: fit-content; */
@@ -92,21 +98,21 @@ a {
     min-width: fit-content;
     margin: 15px;
     padding: 15px;
-    border: 1px solid var(--pri-03);
+    border: 1px solid var(--blu-03);
     justify-content: space-between;
     border-radius: 15px;
     transition: box-shadow 0.3s ease-in-out;
     
     &:hover {
         box-shadow: 0 4px 8px 0 black;
-        border-color: var(--pri-01);
+        border-color: var(--blu-01);
     }
 }
 
 .list-container {
     margin: 5px;
     padding: 5px;
-    border: 1px solid var(--pri-03);
+    border: 1px solid var(--blu-03);
     border-radius: 15px;
 }
 
@@ -115,7 +121,7 @@ a {
 .nav-bar {
     justify-content: space-between;
     overflow: hidden;
-    background-color: var(--ter-01);
+    background-color: var(--bla-01);
     margin: -10px;
     margin-bottom: 10px;
 }
@@ -126,15 +132,15 @@ a {
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
-    color: var(--sec-01);
+    color: var(--bla-01);
 
     &:visited {
-        color: var(--sec-01);
+        color: var(--bla-01);
     }
 
     &:hover {
-        background-color: var(--ter-02);
-        color: var(--sec-02);
+        background-color: var(--bla-02);
+        color: var(--bla-01);
     }
 }
 
@@ -152,7 +158,7 @@ a {
     cursor: pointer;
     
     &:hover {
-        background-color: var(--pri-04);
+        background-color: var(--blu-04);
     }
 
 }
@@ -177,7 +183,7 @@ a {
 
 /* Add a color to the active/current link */
 .nav-bar a.active {
-  background-color: var(--sec-01);
+  background-color: var(--bla-01);
   color: white;
 }
 
@@ -208,22 +214,40 @@ a {
 
 
 #home {
-    padding: 10px;
     display: grid;
     grid-template-columns: 2fr 1fr;
 }
 
-
-.social-platform {
+#contact-content {
     display: flex;
-    align-items: center;
-    margin: 10px 0;
-    padding: 10px;
-    background-color: var(--ter-01);
-    border-radius: 10px;
+    flex-direction: column;
+    gap: 10px;
 }
 
-.pl-icon, .fw-icon, .social-icon {
+.contact {
+    display: flex;
+    align-items: center;
+    /* padding: 10px; */
+    border-radius: 10px;
+    justify-content: space-between;
+    font-size: small;
+}
+
+.contact-link {
+    display: flex;
+    text-decoration: none;
+    color: var(--bla-02);
+    align-items: center;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: medium;
+    &:hover {
+        background-color: var(--bla-02);
+        color: var(--bla-01);
+    }
+}
+
+.pl-icon, .fw-icon, .contact-icon, .tool-icon {
     width: 25px;
     height: 25px;
     margin-right: 5px;
@@ -238,29 +262,30 @@ a {
     margin: 5px 0;
     padding: 10px;
     border-radius: 10px;
-    background-color: var(--pri-04);
-    color: var(--pri-02);
+    background-color: var(--blu-04);
+    color: var(--blu-02);
     justify-content: space-between;
     font-size: x-small;
     
-    &:hover {
+    /* &:hover {
         background-color: var(--pri-03);
         color: var(--pri-01);
-    }
+    } */
 }
 
 .content {
     display: grid;
-    grid-template-columns: repeat(3, minmax(110px, 1fr));
+    grid-template-columns: repeat(2, minmax(110px, 1fr));
     gap: 10px;
 }
 
 #projects-content {
-    grid-template-columns: repeat(2, minmax(200px, 1fr));
+    /* grid-template-columns: repeat(2, minmax(200px, 1fr)); */
+    display: block;
 }
 
 .project {
-    border: 1px solid var(--pri-04);
+    border: 1px solid var(--blu-04);
     border-radius: 10px;
     padding: 15px;
 
@@ -280,6 +305,36 @@ a {
         grid-template-columns: repeat(2, minmax(100px, 1fr));
         gap: 5px;
     }
+
+    .project-photo {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        margin-top: 10px;
+    }
+
+    .photo-nav-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        
+        .photo-nav {
+            background-color: var(--blu-04);
+            border: none;
+            color: var(--blu-02);
+            padding: 5px 10px;
+            text-align: center;
+            text-decoration: none;
+            margin: 4px 2px;
+            border-radius: 5px;
+
+
+            &:hover {
+                background-color: var(--blu-03);
+                color: var(--blu-01);
+            }
+        }
+    }
 }
 
 
@@ -287,8 +342,8 @@ a {
     border-radius: 10px;
     margin: 15px 0;
     padding: 15px;
-    background-color: var(--ter-01);
-    color: var(--sec-02);
+    background-color: var(--pur-04);
+    color: var(--pur-01);
     text-decoration: none;
     display: flex;
     font-size: medium;
@@ -298,7 +353,7 @@ a {
 
     &:hover {
         text-decoration: underline;
-        color: var(--sec-01);
+        color: var(--pur-01);
     }
 
     &::before {
@@ -308,4 +363,8 @@ a {
         height: 20px;
         margin-right: 10px;
     }
+}
+
+.hidden {
+    display: none;
 }

@@ -8,45 +8,40 @@
 </head>
 
 <body>
-    <div class="nav-bar">
+    <!-- <div class="nav-bar">
         <div>
             <a href="#home">Home</a>
             <a href="#projects">Projects</a>
         </div>
-    </div>
+    </div> -->
     <div id="home">
-        <div>
+        <div class="primary-container">
             <h1 id="name">Kaliana Andriamananjara-Cunderlik</h1>
-            <!-- <div class="ho-div primary-container"> -->
-            <div class="primary-container" style="display: grid; grid-template-columns: 1fr 1fr">
-                <h2>Software Development</h2>
-                <h2>Web Development</h2>
-                <h2>Full-Stack Development</h2>
-                <h2>Front-end Development</h2>
-                <h2>Back-end Development</h2>
+            <div class="primary-container" style="display: grid; grid-template-columns: 2fr 1fr;">
+                <div>
+                    <p>
+                        I am a programmer who is passionate about creating efficient, rounded, user-friendly applications.
+                    </p>
+                    <p>
+                        I am quick to develop new skills and am always eager to learn new technologies. I have experience in a variety of programming languages and frameworks, and I enjoy working on both front-end and back-end development.
+                    </p>
+                </div>
+                <div style="text-align: right;">
+                    <h2>Web Development</h2>
+                    <h2>Software Development</h2>
+                    <h2>Full-Stack Development</h2>
+                    <h2>Front-end Development</h2>
+                    <h2>Back-end Development</h2>
+                </div>
             </div>
         </div>
-        <div id="social-platforms">
-            <a class="social-platform" href="https://github.com/kandriam">
-                <img alt="github icon" class="social-icon github-icon" />
-                github.com/kandriam
-            </a>
-            <a class="social-platform" href="https://www.linkedin.com/in/kaliana-andriamananjara-cunderlik">
-                <img alt="linkedin icon" class="social-icon linkedin-icon" />
-                linkedin.com/in/kaliana-andriamananjara-cunderlik
-            </a>
-            <a class="social-platform" href="mailto:kaliana.rmac@gmail.com">
-                <img alt="email icon" class="social-icon mail-icon" />
-                kaliana.rmac@gmail.com
-            </a>
-            <a class="social-platform">
-                <img alt="location icon" class="social-icon location-icon" />
-                St Paul, MN
-            </a>
-        </div>        
+        <div id="contact-info" class="primary-container">
+            <div id="contact-content">
+            </div>
+        </div>
     </div>
     
-    <div id="technologies" style="display: grid; grid-template-columns: 1fr 1fr;">
+    <div id="technologies" style="display: grid; grid-template-columns: 1fr 1fr 1fr;">
         <div id="programming-languages" class="secondary-container">
             <div class="header">
                 <h1>Programming Languages</h1>
@@ -61,11 +56,19 @@
             <div id="fw-content" class="content">
             </div>
         </div>
+        <div id="tools" class="secondary-container">
+            <div class="header">
+                <h1>Tools</h1>
+            </div>
+            <div id="tools-content" class="content">
+            </div>
+        </div>
     </div>
-    <div id="projects" class="primary-container secondary-container">
+    <div id="projects" class="primary-container">
         <div class="header">
             <h1>Projects</h1>
         </div>
         <div id="projects-content" class="content">
         </div>
+    </div>
 </body>

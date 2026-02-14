@@ -4,13 +4,33 @@
         "about": "Passionate front-end programmer with a strong foundation in computer science and experience in both front-end and back-end programming. Co-founded and developed a task management desktop application using TypeScript, JavaScript, HTML, CSS. Proficient in Python, Java and various web programming languages such as TypeScript and JavaScript.",
         "location": "St Paul, MN, USA"
     },
-    "contact": {
-        "email": "kandriam@macalester.edu",
-        "linkedin": "http://www.linkedin.com/in/kandriam/",
-        "github": "https://github.com/kandriam",
-        "location": "St Paul, MN, USA",
-        "phone": "(+1) 651-815-7217"
-    },
+    "contact": [
+        {
+            "type": "mail",
+            "text": "kandriam@macalester.edu",
+            "link": "mailto:kaliana.rmac@gmail.com"
+        },
+        {
+            "type": "linkedin",
+            "text": "linkedin.com/in/kandriam/",
+            "link": "http://www.linkedin.com/in/kandriam/"
+        },
+        {
+            "type": "github",
+            "text": "github.com/kandriam",
+            "link": "https://github.com/kandriam"
+        },
+        {
+            "type": "location",
+            "text": "St Paul, MN, USA",
+            "link": "https://www.google.com/maps/place/St+Paul,+MN"
+        },
+        {
+            "type": "phone",
+            "text": "(+1) 651-815-7217",
+            "link": "tel:+16518157217"
+        }
+    ],
     "education": {
         "school": "Macalester College",
         "degree": "Bachelor of Arts",
@@ -49,19 +69,16 @@
         "Node.js",
         "Express.js",
         "Tauri",
-        "xcode",
         "RStudio"
     ],
     "tools": [
         "Git",
-        "GitHub/GitHub Desktop",
+        "GitHub",
         "VS Code",
         "Xcode",
-        "Unity",
         "Figma",
         "WordPress",
-        "Microsoft Office",
-        "Google Workspace"
+        "Unity"
     ],
     "development-skills": [
         "Front-end Development",
@@ -108,27 +125,39 @@
     "projects": [
         {
             "title": "TaskManager",
+            "role": "Co-Founder and Lead Front-End Developer",
             "description": "Co-founded and developed a task management desktop application using TypeScript, JavaScript, HTML, CSS. Implemented front-end features such as drag-and-drop task organization, customizable themes, and real-time collaboration. Utilized Tauri to create a lightweight and efficient desktop application that integrates seamlessly with the user's operating system.",
-            "technologies": ["TypeScript", "JavaScript", "HTML", "CSS", "Tauri"],
-            "link": "https://github.com/forkbomb-2491/task-manager"
+            "technologies": ["TypeScript", "JavaScript", "Rust", "HTML", "CSS", "Tauri"],
+            "link": "https://github.com/forkbomb-2491/task-manager",
+            "photos": ["project-photos/taskmanager/taskmanager_01.png", "project-photos/taskmanager/taskmanager_02.png", "project-photos/taskmanager/taskmanager_03.png", "project-photos/taskmanager/taskmanager_04.png", "project-photos/taskmanager/taskmanager_05.png"],
+            "photo-folder": "project-photos/taskmanager/"
         },
         {
             "title": "Habbit",
-            "description": "Designed and developed desktop application using TypeScript, Angular, HTML and CSS, creating effective user interface and functionality",
+            "role": "Designer and Developer",
+            "description": "Created effective user interface and functionality that allows users to track their habits longterm. Includes a flexible tracking system that allows users to track habits across any month and year in the past or present.",
             "technologies": ["TypeScript", "Angular", "HTML", "CSS"],
-            "link": "https://github.com/kandriam/habbit-prototype"
+            "link": "https://github.com/kandriam/habbit-prototype",
+            "photos": ["project-photos/habbit/habbit_01.png", "project-photos/habbit/habbit_02.png"],
+            "photo-folder": "project-photos/habbit/"
         },
         {
             "title": "Worldery",
-            "description":"An application to organize created worlds for any purpose, such as writing, tabletop RPGs, or game development.",
+            "role": "Designer and Developer",
+            "description":"Designed and developed an application that allows users to organize created worlds for any purpose, such as writing, tabletop RPGs, or game development. Users can create, organize characters and character relationships, events and timelines, locations and stories within a created world.",
             "technologies": ["TypeScript", "Angular", "HTML", "CSS"],
-            "link": "https://github.com/kandriam/worldery"
+            "link": "https://github.com/kandriam/worldery",
+            "photos": ["project-photos/worldery/worldery_home.png", "project-photos/worldery/worldery_character.png"],
+            "photo-folder": "project-photos/worldery/"
         },
         {
             "title": "RPMe",
-            "description":"A role-playing game character management application to help users create and manage characters for tabletop RPGs.",
+            "role": "Designer and Front-End Developer",
+            "description": "Implemented the front-end for a character management application that allows users manage characters for tabletop RPGs such as DND. Users can create a user profile to log into and sign out of,  and within this profile can create, edit and delete characters in great detail.",
             "technologies": ["Python", "JavaScript", "Django", "SQLite", "HTML", "CSS"],
-            "link": "https://github.com/kandriam/internet-computing-project-RPMe"
+            "link": "https://github.com/kandriam/internet-computing-project-RPMe",
+            "photos": ["project-photos/rpme/rpme_01.png", "project-photos/rpme/rpme_02.png"],
+            "photo-folder": "project-photos/rpme/"
         }
     ],
 
