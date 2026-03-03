@@ -15,9 +15,9 @@
     --pur-03: #8c39d4;
     --pur-04: #65109f;
     
-    --bla-01: #999999;
-    --bla-02: #666666;
-    --bla-03: #333333;
+    --bla-01: #ffffff;
+    --bla-02: #aaaaaa;
+    --bla-03: #555555;
     --bla-04: #000000;
 
     /* Eng */
@@ -37,15 +37,16 @@ body {
     margin: 10px;
     /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
     font-family: 'Lucida Console', 'Courier New', monospace;
-    color: var(--bla-02);
-    background-color: var(--bla-04);
+    color: var(--blu-02);
+    /* background-color: var(--bla-04); */
+    background-color: var(--bla-01);
 }
 
 h1 {
     font-size: x-large;
-    color: var(--bla-01);
+    color: var(--blu-01);
     margin-bottom: 15px;
-    text-decoration: underline var(--bla-01) wavy;
+    text-decoration: underline var(--blu-01) wavy;
 }
 h2 {
     font-size: large;
@@ -236,7 +237,7 @@ a {
 .contact-link {
     display: flex;
     text-decoration: none;
-    color: var(--bla-02);
+    color: var(--blu-02);
     align-items: center;
     border-radius: 10px;
     padding: 10px;
