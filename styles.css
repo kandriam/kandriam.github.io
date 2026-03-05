@@ -31,26 +31,29 @@
     --comp-02:#2b6d9c;
     --comp-03:#1b4a73;
     --comp-04:#0a2b4e;
+
+    --std-box-shadow: 5px 5px var(--blu-02);
+    --std-border-radius: 5px;
+    --icon-border-radius: 10px;
 }
 
 body {
     margin: 10px;
     /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
-    font-family: 'Lucida Console', 'Courier New', monospace;
+    /* font-family: 'Lucida Console', 'Courier New', monospace; */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: var(--blu-02);
-    /* background-color: var(--bla-04); */
     background-color: var(--bla-01);
 }
 
 h1 {
-    font-size: x-large;
-    color: var(--blu-01);
-    margin-bottom: 15px;
-    text-decoration: underline var(--blu-01) wavy;
+    font-size: xx-large;
+    color: var(--blu-03);
+    margin-top: 15px;
+    text-decoration: underline var(--blu-01);
 }
 h2 {
-    font-size: large;
-    /* text-decoration: underline var(--bla-01) wavy; */
+    font-size: x-large;
     margin-bottom: 15px;
 }
 h3 {
@@ -63,6 +66,15 @@ p {
     margin-bottom: 10px;
 }
 
+a {
+    /* font-style: italic; */
+    text-decoration: wavy underline !important;
+    transition: 0.25s ease-in-out;
+
+    &:hover {
+        transform: translateY(-5px);
+    }
+}
 
 ul {
     list-style: none;
@@ -86,35 +98,31 @@ a {
 }
 
 /* Containers */
+.container {
+    margin: 10px;
+    padding: 10px;
+}
+
 .primary-container {
-    margin: 25px;
-    padding: 25px;
-    border: 1px solid var(--blu-03);
+    border: 1px solid var(--blu-01);
     justify-content: space-between;
-    border-radius: 15px;
-    /* width: fit-content; */
+    border-radius: var(--std-border-radius);
 }
 
 .secondary-container {
     min-width: fit-content;
-    margin: 15px;
-    padding: 15px;
-    border: 1px solid var(--blu-03);
+    border: 1px solid var(--blu-02) ;
     justify-content: space-between;
-    border-radius: 15px;
-    transition: box-shadow 0.3s ease-in-out;
+    border-radius: var(--std-border-radius);
+    transition: 0.25s ease-in-out;
     
-    &:hover {
-        box-shadow: 0 4px 8px 0 black;
-        border-color: var(--blu-01);
-    }
 }
 
 .list-container {
     margin: 5px;
     padding: 5px;
     border: 1px solid var(--blu-03);
-    border-radius: 15px;
+    border-radius: var(--std-border-radius);
 }
 
 /* Top Navigation Bar */
@@ -155,7 +163,7 @@ a {
     display: inline-block;
     font-size: small;
     margin: 4px 2px;
-    border-radius: 12px;
+    border-radius: var(--std-border-radius);
     cursor: pointer;
     
     &:hover {
@@ -174,7 +182,7 @@ a {
     display: inline-block;
     font-size: small;
     margin: 4px 2px;
-    border-radius: 12px;
+    border-radius: var(--std-border-radius);
     cursor: pointer;
     &:hover {
         background-color: var(--eng-04);
@@ -229,7 +237,7 @@ a {
     display: flex;
     align-items: center;
     /* padding: 10px; */
-    border-radius: 10px;
+    border-radius: var(--std-border-radius);
     justify-content: space-between;
     font-size: small;
 }
@@ -239,39 +247,47 @@ a {
     text-decoration: none;
     color: var(--blu-02);
     align-items: center;
-    border-radius: 10px;
+    border-radius: var(--std-border-radius);
     padding: 10px;
     font-size: medium;
+    transition: 0.25s;
+    
     &:hover {
-        background-color: var(--bla-02);
-        color: var(--bla-01);
+        background-color: var(--blu-01);
+        color: var(--blu-04);
+        transform: translateY(-5px);
+        box-shadow: var(--std-box-shadow);
     }
 }
 
-.pl-icon, .fw-icon, .contact-icon, .tool-icon {
+.icon {
     width: 25px;
     height: 25px;
     margin-right: 5px;
-    background-color: white;
-    border-radius: 10px;
+    border-radius: var(--icon-border-radius);
     padding: 5px;
 }
+
+.tech-icon {
+    background-color: white;
+}
+
 
 .technology {
     display: flex;
     align-items: center;
-    margin: 5px 0;
-    padding: 10px;
-    border-radius: 10px;
-    background-color: var(--blu-04);
-    color: var(--blu-02);
+    padding: 5px;
+    border-radius: var(--std-border-radius);
+    background-color: var(--blu-03);
+    color: var(--blu-01);
     justify-content: space-between;
+    vertical-align: sub;
     font-size: x-small;
-    
-    /* &:hover {
-        background-color: var(--pri-03);
-        color: var(--pri-01);
-    } */
+    transition: 0.25s ease-in-out;
+
+    &:hover {
+        transform: translateY(-5px);
+    }
 }
 
 .content {
@@ -286,31 +302,35 @@ a {
 }
 
 .project {
-    border: 1px solid var(--blu-04);
-    border-radius: 10px;
-    padding: 15px;
+    border-radius: var(--std-border-radius);
+    padding: 10px;
+    margin: 10px;
+    transition: 0.25s ease-in-out;
 
     .title {
-        font-size: large;
         margin-bottom: 10px;
     }
 
+    .role {
+        font-style: italic;
+    }
     .description {
         font-size: small;
     }
 
     .technologies {
         margin-top: 10px;
-        font-size: small;
+        /* font-size: small; */
         display: grid;
-        grid-template-columns: repeat(2, minmax(100px, 1fr));
+        grid-template-columns: repeat(3, minmax(100px, 1fr));
         gap: 5px;
     }
 
     .project-photo {
         width: 100%;
         height: auto;
-        border-radius: 10px;
+        border-radius: var(--std-border-radius);
+        border: 1px solid var(--blu-03);
         margin-top: 10px;
     }
 
@@ -322,12 +342,12 @@ a {
         .photo-nav {
             background-color: var(--blu-04);
             border: none;
-            color: var(--blu-02);
+            color: var(--blu-01);
             padding: 5px 10px;
             text-align: center;
             text-decoration: none;
             margin: 4px 2px;
-            border-radius: 5px;
+            border-radius: var(--std-border-radius);
 
 
             &:hover {
@@ -336,15 +356,21 @@ a {
             }
         }
     }
+
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--std-box-shadow);
+    }
 }
 
 
 .github-link {
-    border-radius: 10px;
+    border-radius: var(--std-border-radius);
     margin: 15px 0;
-    padding: 15px;
-    background-color: var(--pur-04);
-    color: var(--pur-01);
+    padding: 10px;
+    background-color: var(--pur-02);
+    color: var(--pur-04);
     text-decoration: none;
     display: flex;
     font-size: medium;
@@ -353,7 +379,6 @@ a {
 
 
     &:hover {
-        text-decoration: underline;
         color: var(--pur-01);
     }
 

@@ -94,10 +94,10 @@ async function loadContactSection(arrayName) {
             itemElem.classList.add('contact-item');
             const icon = await getIcon(contact.type.toLowerCase());
             itemElem.innerHTML = `
-            <div class="contact" target="_blank">
-                <img class="contact-icon ${contact.type.toLowerCase()}-icon" src="${icon}" alt="${contact.type} icon"/>
-                <a class="contact-link" href="${contact.link}">${contact.text}</a>
-            </div>
+            <a class="contact contact-link" href="${contact.link}">
+                <img class="icon contact-icon ${contact.type.toLowerCase()}-icon" src="${icon}" alt="${contact.type} icon"/>
+                <span class="contact-text">${contact.text}</span>
+            </a>
             `;
             section.appendChild(itemElem);
         }
@@ -120,7 +120,7 @@ async function loadProjectSection(arrayName, sectionId,) {
                 icon = await getIcon(tech.toLowerCase());
                 project.technologies[index] = `
                     <div class="technology prog-lang">
-                        <img class="pl-icon ${tech.toLowerCase()}-icon" src=${icon} alt="${tech} icon"/>
+                        <img class="icon tech-icon ${tech.toLowerCase()}-icon" src=${icon} alt="${tech} icon"/>
                         <h3 class="tech-name">${tech}</h3>
                     </div>`;
             }
@@ -235,7 +235,7 @@ async function loadProgrammingLanguagesSection(arrayName, sectionId) {
         itemElem.classList.add(`prog-lang`, `technology`);
         icon = await getIcon(language.toLowerCase());
         itemElem.innerHTML = `
-            <img class="pl-icon ${language.toLowerCase()}-icon" src="${icon}" alt="${language} icon"/>
+            <img class="icon tech-icon pl-icon ${language.toLowerCase()}-icon" src="${icon}" alt="${language} icon"/>
             <h3 class="title">${language}</h3>
         `;
         section.appendChild(itemElem);
@@ -255,7 +255,7 @@ async function loadFrameworksSection(arrayName, sectionId) {
         itemElem.classList.add(`framework`, `technology`);
         icon = await getIcon(framework.toLowerCase());
         itemElem.innerHTML = `
-            <img class="fw-icon ${framework.toLowerCase()}-icon" src="${icon}" alt="${framework} icon"/>
+            <img class="icon tech-icon fw-icon ${framework.toLowerCase()}-icon" src="${icon}" alt="${framework} icon"/>
             <h3 class="title">${framework}</h3>
         `;
         section.appendChild(itemElem);
@@ -275,7 +275,7 @@ async function loadToolsSection(arrayName, sectionId) {
         itemElem.classList.add(`tool`, `technology`);
         icon = await getIcon(tool.toLowerCase().replace(' ', '-'));
         itemElem.innerHTML = `
-            <img class="tool-icon ${tool.toLowerCase()}-icon" src="${icon}" alt="${tool} icon"/>
+            <img class="icon tech-icon tool-icon ${tool.toLowerCase()}-icon" src="${icon}" alt="${tool} icon"/>
             <h3 class="title">${tool}</h3>
         `;
         section.appendChild(itemElem);
@@ -294,7 +294,7 @@ async function loadTechnologies(techArray, containerId) {
         const itemElem = document.createElement('div');
         itemElem.classList.add('technology');
         itemElem.innerHTML = `
-            <img class="tech-icon ${tech.toLowerCase()}-icon" src="" alt="${tech} icon"/>
+            <img class="icon tech-icon ${tech.toLowerCase()}-icon" src="" alt="${tech} icon"/>
             <h3 class="title">${tech}</h3>
         `;
         container.appendChild(itemElem);

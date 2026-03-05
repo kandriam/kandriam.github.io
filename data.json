@@ -76,6 +76,7 @@
         "GitHub",
         "VS Code",
         "Xcode",
+        "Blender",
         "Figma",
         "WordPress",
         "Unity"
@@ -145,7 +146,7 @@
             "title": "Worldery",
             "role": "Designer and Developer",
             "description":"Designed and developed an application that allows users to organize created worlds for any purpose, such as writing, tabletop RPGs, or game development. Users can create, organize characters and character relationships, events and timelines, locations and stories within a created world.",
-            "technologies": ["TypeScript", "Angular", "HTML", "CSS"],
+            "technologies": ["TypeScript", "Angular", "Django", "HTML", "CSS"],
             "link": "https://github.com/kandriam/worldery",
             "photos": ["project-photos/worldery/worldery_home.png", "project-photos/worldery/worldery_character.png"],
             "photo-folder": "project-photos/worldery/"
