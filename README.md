@@ -9,6 +9,9 @@ http://localhost:8000/
 https://www.svgrepo.com/collection/colored-svg-logos/
 https://www.svgrepo.com/collection/primeng-interface-icons/ 2
 
+- GitHub Color Palette
+[https://brand.github.com/foundations/color](https://brand.github.com/foundations/color)
+
 <!-- Software icons -->
 https://devicon.dev/
 

@@ -31,11 +31,18 @@
             "link": "tel:+16518157217"
         }
     ],
-    "education": {
-        "school": "Macalester College",
-        "degree": "Bachelor of Arts",
-        "majors": ["Computer Science", "English"]
-    },
+    "education": [
+        {
+            "school": "Macalester College",
+            "degree": "Bachelor of Arts",
+            "majors": ["Computer Science", "English"]
+        },
+        {
+            "school": "Oxford Summer Programmes",
+            "degree": "Oxford Summer Scholar",
+            "majors": ["Creative Writing"]
+        }
+    ],
     "comp-sci-courses": [
         "Comp 128: Data Structures",
         "Comp 221: Algorithm Design and Analysis",
@@ -165,7 +172,7 @@
     "work-experience": [
         {
             "title": "Front-End Programmer, Independent Contractor",
-            "company": "Collagia",
+            "company": "Critical Hit Technologies | Collagia",
             "timeframe": "September 2025-Present",
             "responsibilities": [
                 "Design, develop and implement functional front-end of chatbot window for the Collagia software using Angular, TypeScript, HTML and CSS",

@@ -1,15 +1,17 @@
 // Load content when DOM is fully loaded
 document.addEventListener('DOMContentLoaded', async () => {
-    console.log('Script loaded and DOM is ready.');
-
     loadContactSection('contact');
     loadProgrammingLanguagesSection('programming-languages', 'pl-content');
     loadFrameworksSection('frameworks', 'fw-content');
     loadToolsSection('tools', 'tools-content');
-    
     loadProjectSection('projects', 'projects-content');
+    loadEducationSection('education-content');
+    loadWorkExperienceSection('work-experience', 'work-experience-content');
+    loadTagSection('technical-skills', 'technical-skills-content');
+    loadTagSection('development-skills', 'development-skills-content');
+    loadTagSection('soft-skills', 'soft-skills-content');
+    loadTagSection('languages', 'languages-content');
     loadIcons();
-    
 });
 
 async function getDataArray(arrayName) {
@@ -206,14 +208,6 @@ async function loadProjectSection(arrayName, sectionId,) {
         rightCol.style.display = 'flex';
         rightCol.style.flexDirection = 'column';
         if (photosSection) rightCol.appendChild(photosSection);
-        // if (project.link) {
-        //     const linkElem = document.createElement('a');
-        //     linkElem.classList.add('project-link', 'github-link');
-        //     linkElem.href = project.link;
-        //     linkElem.target = '_blank';
-        //     linkElem.innerHTML = '<h2>View on GitHub</h2>';
-        //     rightCol.appendChild(linkElem);
-        // }
 
         projectContent.appendChild(leftCol);
         projectContent.appendChild(rightCol);
@@ -298,5 +292,71 @@ async function loadTechnologies(techArray, containerId) {
             <h3 class="title">${tech}</h3>
         `;
         container.appendChild(itemElem);
+    });
+}
+
+async function getDataObject(key) {
+    try {
+        const response = await fetch('data.json');
+        const data = await response.json();
+        return data[key] || null;
+    } catch (error) {
+        console.error('Error fetching data.json:', error);
+        return null;
+    }
+}
+
+async function loadEducationSection(sectionId) {
+    const section = document.getElementById(sectionId);
+    if (!section) return;
+    const entries = await getDataArray('education');
+    if (!entries.length) return;
+    section.innerHTML = '';
+    entries.forEach(edu => {
+        const item = document.createElement('div');
+        item.classList.add('edu-item');
+        item.innerHTML = `
+            <div class="edu-section">
+                <div class="edu-school">${edu.school || ''}</div>
+                <div class="edu-degree">${edu.degree || ''}</div>
+                <div class="edu-majors">${Array.isArray(edu.majors) ? edu.majors.join(' &amp; ') : (edu.majors || '')}</div>
+            </div>
+        `;
+        section.appendChild(item);
+    });
+}
+
+async function loadWorkExperienceSection(arrayName, sectionId) {
+    const jobs = await getDataArray(arrayName);
+    const section = document.getElementById(sectionId);
+    if (!section) return;
+    section.innerHTML = '';
+    jobs.forEach(job => {
+        const item = document.createElement('div');
+        item.classList.add('experience-item');
+        item.innerHTML = `
+            <div class="exp-header">
+                <span class="exp-title">${job.title}</span>
+                <span class="exp-timeframe">${job.timeframe}</span>
+            </div>
+            <div class="exp-company">${job.company}</div>
+            <ul class="exp-responsibilities">
+                ${job.responsibilities.map(r => `<li>${r}</li>`).join('')}
+            </ul>
+        `;
+        section.appendChild(item);
+    });
+}
+
+async function loadTagSection(arrayName, sectionId) {
+    const items = await getDataArray(arrayName);
+    const section = document.getElementById(sectionId);
+    if (!section) return;
+    section.innerHTML = '';
+    items.forEach(item => {
+        const tag = document.createElement('span');
+        tag.classList.add('tag');
+        tag.textContent = item;
+        section.appendChild(tag);
     });
 }

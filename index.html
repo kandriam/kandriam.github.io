@@ -1,75 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kaliana Andriamananjara-Cunderlik</title>
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
-     <!-- <script src="script.js"></script> -->
 </head>
 
 <body>
-    <!-- <div class="nav-bar">
-        <div>
-            <a href="#home">Home</a>
-            <a href="#projects">Projects</a>
+    <nav class="nav-bar">
+        <a class="nav-brand" href="index.html">KAC</a>
+        <div class="nav-links">
+            <a href="index.html" class="active">Home</a>
+            <a href="skills.html">Skills</a>
+            <a href="projects.html">Projects</a>
         </div>
-    </div> -->
-    <div id="home" class="container primary-container" style="display: block;">
-        <h1 id="name">Kaliana Andriamananjara-Cunderlik</h1>
-        <div style="display: grid; grid-template-columns: 2fr 1fr;">
-            <div class="container" style="display: grid; grid-template-columns: 2fr 1fr;">
-                <div class="container">
-                    <p>
-                        I am a versatile programmer who is passionate about creating efficient, rounded, user-friendly applications.
-                    </p>
-                    <p>
-                        I am quick to develop new skills and am always eager to learn new technologies. I have experience in a variety of programming languages and frameworks, and I enjoy working on both front-end and back-end development.
-                    </p>
-                </div>
-                <div class="container" style="text-align: right;">
-                    <h3>Web Development</h3>
-                    <h3>Software Development</h3>
-                    <h3>Full-Stack Development</h3>
-                    <h3>Front-end Development</h3>
-                    <h3>Back-end Development</h3>
-                </div>
-            </div>
-            <div id="contact-info" class="container secondary-container">
-                <div id="contact-content">
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <div id="technologies" class="container primary-container" style="display: grid; grid-template-columns: 1fr 1fr 1fr;">
-        <div id="programming-languages" class="container secondary-container">
-            <div class="header">
-                <h2>Programming Languages</h2>
-            </div>
-            <div id="pl-content" class="content">
-            </div>
-        </div>
-        <div id="frameworks" class="container secondary-container">
-            <div class="header">
-                <h2>Frameworks</h2>
-            </div>
-            <div id="fw-content" class="content">
-            </div>
-        </div>
-        <div id="tools" class="container secondary-container">
-            <div class="header">
-                <h2>Tools</h2>
-            </div>
-            <div id="tools-content" class="content">
-            </div>
-        </div>
-    </div>
+    </nav>
 
-    <div id="projects" class="container primary-container">
-        <div class="header">
-            <h2>Projects</h2>
+    <main class="page-layout">
+
+        <!-- Hero -->
+        <section class="card hero-section">
+            <div class="hero-grid">
+                <div class="hero-left">
+                    <div>
+                        <h1>Kaliana Andriamananjara-Cunderlik</h1>
+                        <p class="hero-subtitle">Full-Stack Developer &nbsp;·&nbsp; Computer Science &amp; English</p>
+                    </div>
+                    <p class="hero-bio">Passionate programmer with a strong foundation in computer science and experience in both front-end and back-end development. Quick to learn new technologies and focused on building efficient, user-friendly applications.</p>
+                    <div class="badge-row">
+                        <span class="skill-badge">Software Development</span>
+                        <span class="skill-badge">Full-Stack</span>
+                        <span class="skill-badge">Front-end</span>
+                        <span class="skill-badge">Back-end</span>
+                        <span class="skill-badge">Web Development</span>
+                        <span class="skill-badge">Desktop Apps</span>
+                    </div>
+                </div>
+                <div class="contact-card">
+                    <p class="section-label">Contact</p>
+                    <div id="contact-content"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education + Work Experience -->
+        <div class="two-col-layout">
+            <section class="card">
+                <h2>Education</h2>
+                <div id="education-content"></div>
+            </section>
+
+            <section class="card">
+                <h2>Experience</h2>
+                <div id="work-experience-content"></div>
+            </section>
         </div>
-        <div id="projects-content" class="content">
-        </div>
-    </div>
+
+    </main>
 </body>
+</html>
