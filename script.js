@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     loadTagSection('technical-skills', 'technical-skills-content');
     loadTagSection('development-skills', 'development-skills-content');
     loadTagSection('soft-skills', 'soft-skills-content');
-    loadTagSection('languages', 'languages-content');
+    loadLanguagesSection('languages', 'languages-content');
     loadIcons();
 });
 
@@ -358,5 +358,21 @@ async function loadTagSection(arrayName, sectionId) {
         tag.classList.add('tag');
         tag.textContent = item;
         section.appendChild(tag);
+    });
+}
+
+async function loadLanguagesSection(arrayName, sectionId) {
+    const items = await getDataArray(arrayName);
+    const section = document.getElementById(sectionId);
+    if (!section) return;
+    section.innerHTML = '';
+    items.forEach(item => {
+        const row = document.createElement('div');
+        row.classList.add('language-item');
+        row.innerHTML = `
+            <span class="language-name">${item.language}</span>
+            <span class="language-proficiency">${item.proficiency}</span>
+        `;
+        section.appendChild(row);
     });
 }

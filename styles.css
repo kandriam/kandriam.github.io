@@ -430,6 +430,36 @@ ul {
     white-space: nowrap;
 }
 
+/* ── Spoken Languages ── */
+
+.language-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.language-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 12px;
+    background-color: #edf8ff;
+    border: 1px solid var(--blu-01);
+    border-radius: var(--border-radius);
+}
+
+.language-name {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--blu-04);
+}
+
+.language-proficiency {
+    font-size: 0.78rem;
+    color: var(--bla-02);
+    font-style: italic;
+}
+
 /* ── Projects ── */
 
 #projects-content {

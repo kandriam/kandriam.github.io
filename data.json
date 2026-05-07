@@ -43,6 +43,13 @@
             "majors": ["Creative Writing"]
         }
     ],
+    "certifications": [
+        {
+            "name": "Introduction to Cybersecurity",
+            "issuer": "Harvard University (edX)",
+            "link": ""
+        }
+    ],
     "comp-sci-courses": [
         "Comp 128: Data Structures",
         "Comp 221: Algorithm Design and Analysis",
@@ -123,10 +130,10 @@
         "Writing"
     ],
     "languages": [
-        "English (Native)",
-        "French (Professional Proficiency)",
-        "Spanish (Professional Proficiency)",
-        "Malagasy (Limited Proficiency)"
+        {"language": "English", "proficiency": "Native"},
+        {"language": "French", "proficiency": "Professional Proficiency"},
+        {"language": "Spanish", "proficiency": "Professional Proficiency"},
+        {"language": "Malagasy", "proficiency": "Limited Proficiency"}
     ],
 
 
